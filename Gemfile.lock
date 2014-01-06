@@ -1,3 +1,9 @@
+GIT
+  remote: git://github.com/anolson/git_diff.git
+  revision: d15c8e691540c9b7cb9dd4cdee4b1abc10ad972c
+  specs:
+    git_diff (0.1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -122,6 +128,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  git_diff!
   jbuilder (~> 1.2)
   jquery-rails
   rails (= 4.0.2)
