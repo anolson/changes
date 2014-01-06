@@ -1,0 +1,3 @@
+git diff | curl -X POST \
+  --data-urlencode pull_request[diff]@- \
+  http://localhost:3000/pull_requests

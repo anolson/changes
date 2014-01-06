@@ -21,6 +21,7 @@ module MiniPr
     # config.i18n.default_locale = :de
 
     config.generators do |g|
+      g.stylesheets false
       g.test_framework :rspec
     end
   end
