@@ -1,0 +1,7 @@
+<div class="diff-file">
+  <div class="info">
+    <span class="file-name"><%= diff_file.a_path %></span>
+  </div>
+
+  <%= render partial: "hunk", collection: diff_file.hunks %>
+</div>

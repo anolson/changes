@@ -6,6 +6,7 @@ class PullRequestsController < ApplicationController
 
   def show
     @pull_request = PullRequest.find(params[:id])
+    @diff_files = GitDiff.from_string(@pull_request.diff)
   end
 
   private

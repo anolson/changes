@@ -1,0 +1,8 @@
+<tr>
+  <td class="line-number left"><%= line.line_number.left %></td>
+  <td class="line-number right"><%= line.line_number.right %></td>
+  <!-- TODO: move to a presenter -->
+  <td class="code <%= line.addition? ? 'addition' : nil %> <%= line.deletion? ? 'deletion' : nil %>">
+    <pre><%= line.content %></pre>
+  </td>
+</tr>

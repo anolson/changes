@@ -1,0 +1,7 @@
+<div class="lines">
+  <table>
+    <%= render partial: "range", locals: { hunk: hunk } %>
+
+    <%= render partial: "line", collection: hunk.lines  %>
+  </table>
+</div>
