@@ -73,11 +73,11 @@ html,body {
 }
 
 .diff-file .addition {
-  background-color: #BFC;
+  background-color: #DFD;
 }
 
 .diff-file .deletion {
-  background-color: #FBC;
+  background-color: #FDD;
 }
 
 .diff-file pre {
