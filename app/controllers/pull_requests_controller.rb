@@ -5,7 +5,7 @@ class PullRequestsController < ApplicationController
   end
 
   def show
-    @pull_request = PullRequest.where(permalink: params[:id]).first!
+    @pull_request = PullRequest.where(permalink: permalink_param).first!
     @diff_files = GitDiff.from_string(@pull_request.diff)
   end
 
@@ -13,5 +13,9 @@ class PullRequestsController < ApplicationController
 
   def pull_request_params
     params.require(:pull_request).permit(:diff)
+  end
+
+  def permalink_param
+    params[:id] || params[:permalink]
   end
 end
