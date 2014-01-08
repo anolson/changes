@@ -1,11 +1,11 @@
 class PullRequestsController < ApplicationController
   def create
-    pull_request = PullRequest.create(pull_request_params)
+    pull_request = PullRequest.create!(pull_request_params)
     render nothing: true, status: 201
   end
 
   def show
-    @pull_request = PullRequest.find(params[:id])
+    @pull_request = PullRequest.where(permalink: params[:id]).first!
     @diff_files = GitDiff.from_string(@pull_request.diff)
   end
 

@@ -1,36 +1,15 @@
 require 'spec_helper'
 
 describe PullRequestsController do
-
-  describe "GET #show" do
-    let(:pull_request) { PullRequest.create! }
-
-    it "responds successfully with a 200 status" do
-      get :show, id: pull_request.id
-      expect(response).to be_success
-    end
-
-    it "renders the show template" do
-      get :show, id: pull_request.id
-      expect(response).to render_template(:show)
-    end
-
-    it "assigns @pull_request correctly" do
-      get :show, id: pull_request.id
-      expect(assigns(:pull_request)).to eq(pull_request)
-    end
-  end
-
-  describe "POST #create" do
     let(:diff) do
-<<-DIFF
+<<-'DIFF'
 diff --git a/lib/grit/commit.rb b/lib/grit/commit.rb
 index 403ea33..dd4b590 100644
 --- a/lib/grit/commit.rb
 +++ b/lib/grit/commit.rb
 @@ -27,6 +27,7 @@
 
-       lines = info.split("\\n")
+       lines = info.split("\n")
        tree = lines.shift.split(' ', 2).last
 +
        parents = []
@@ -52,6 +31,26 @@ index 033b446..0e2d140 100644
 DIFF
     end
 
+  describe "GET #show" do
+    let(:pull_request) { PullRequest.create!(diff: diff) }
+
+    it "responds successfully with a 200 status" do
+      get :show, id: pull_request.permalink
+      expect(response).to be_success
+    end
+
+    it "renders the show template" do
+      get :show, id: pull_request.permalink
+      expect(response).to render_template(:show)
+    end
+
+    it "assigns @pull_request correctly" do
+      get :show, id: pull_request.permalink
+      expect(assigns(:pull_request)).to eq(pull_request)
+    end
+  end
+
+  describe "POST #create" do
     let(:pull_request_attributes) { { diff: diff } }
 
     context "with valid attributes" do
@@ -59,11 +58,7 @@ DIFF
         expect {
           post :create, pull_request: pull_request_attributes
         }.to change(PullRequest, :count).by(1)
-        
-        # expect(response.status).to eq(201)
       end
     end
-
   end
-
 end
