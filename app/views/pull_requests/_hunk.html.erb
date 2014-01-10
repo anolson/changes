@@ -2,6 +2,6 @@
   <table>
     <%= render partial: "range", locals: { hunk: hunk } %>
 
-    <%= render partial: "line", collection: hunk.lines  %>
+    <%= render partial: "line", collection: LineDecorator.decorate_collection(hunk.lines)  %>
   </table>
 </div>

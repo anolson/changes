@@ -27,6 +27,7 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'draper'
 gem 'git_diff', github: 'anolson/git_diff'
 
 group :development, :test do

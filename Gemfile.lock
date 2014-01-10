@@ -42,6 +42,10 @@ GEM
       execjs
     coffee-script-source (1.6.3)
     diff-lcs (1.2.5)
+    draper (1.2.1)
+      actionpack (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0.3)
     erubis (2.7.0)
     execjs (2.0.2)
     hike (1.2.3)
@@ -79,6 +83,7 @@ GEM
     rake (10.1.1)
     rdoc (3.12.2)
       json (~> 1.4)
+    request_store (1.0.5)
     rspec-core (2.14.7)
     rspec-expectations (2.14.4)
       diff-lcs (>= 1.1.3, < 2.0)
@@ -128,6 +133,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 4.0.0)
+  draper
   git_diff!
   jbuilder (~> 1.2)
   jquery-rails
