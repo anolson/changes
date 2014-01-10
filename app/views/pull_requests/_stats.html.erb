@@ -1,5 +1,5 @@
 <div id="stats">
   <span><strong><%= pluralize @pull_request.diff_files.count, "file" %></strong></span>
-  <span class="addition">with <strong><%= pluralize @pull_request.diff_files.map(&:total_additions).inject(:+), 'addition'  %></strong></span>
-  <span clas="deletion">and <strong><%= pluralize @pull_request.diff_files.map(&:total_deletions).inject(:+), 'deletion' %></strong></span>
+  <span class="addition">with <strong><%= pluralize @pull_request.total_additions, 'addition'  %></strong></span>
+  <span clas="deletion">and <strong><%= pluralize @pull_request.total_deletions, 'deletion' %></strong></span>
 </div>
