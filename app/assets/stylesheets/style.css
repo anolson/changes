@@ -23,11 +23,9 @@ html,body {
 .file .info {
   background: #EEE;
   text-shadow: 1px 1px #FEFEFE;
-  font-size:13px;
+  font-size:12px;
   padding: 6px 10px;
-  border-bottom: 1px solid #CCC;
   border-radius: 5px 5px 0 0;
-
 }
 
 .file tr.header {
@@ -35,6 +33,7 @@ html,body {
   color: #BBB;
   padding: 4px 10px;
   font-size: 14px;
+  border-top: 1px solid #CCC;
   border-bottom: 1px solid #CCC;
 }
 
