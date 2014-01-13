@@ -12,7 +12,7 @@ html,body {
 
 .clear-fix { clear:both;}
 
-.diff-file {
+.file {
   color: #555;
   font-family: Monaco, Courier, monospace, sans-serif;
   border: 1px solid #CCC;
@@ -20,7 +20,7 @@ html,body {
   margin-bottom: 20px;
 }
 
-.diff-file .info {
+.file .info {
   background: #EEE;
   text-shadow: 1px 1px #FEFEFE;
   font-size:13px;
@@ -30,7 +30,7 @@ html,body {
 
 }
 
-.diff-file tr.header {
+.file tr.header {
   background: #EEEFFF;
   color: #BBB;
   padding: 4px 10px;
@@ -38,21 +38,21 @@ html,body {
   border-bottom: 1px solid #CCC;
 }
 
-.diff-file .lines table {
+.file .lines table {
   width: 100%;
   border-collapse: collapse;
 }
 
 
-.diff-file tr:last-child td.code {
+.file tr:last-child td.code {
   border-radius: 0 0 5px 0;
 }
 
-.diff-file tr:last-child td.left {
+.file tr:last-child td.left {
   border-radius: 0 0 0 5px;
 }
 
-.diff-file .line-number {
+.file .line-number {
   border-right: 1px solid #CCC;
   background: #FAFAFA;
   color: #AAA;
@@ -62,7 +62,7 @@ html,body {
 
 }
 
-.diff-file .code {
+.file .code {
   float:right;
   color: #333;
   background: #FFF;
@@ -72,15 +72,15 @@ html,body {
   overflow: hidden;
 }
 
-.diff-file .addition {
+.file .addition {
   background-color: #DFD;
 }
 
-.diff-file .deletion {
+.file .deletion {
   background-color: #FDD;
 }
 
-.diff-file pre {
+.file pre {
   margin:2px;
 }
 

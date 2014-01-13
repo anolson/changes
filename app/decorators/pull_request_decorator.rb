@@ -1,15 +1,19 @@
 class PullRequestDecorator < Draper::Decorator
   delegate_all
 
-  def diff_files
-    @diff_files ||= GitDiff.from_string(diff)
+  def diff
+    @diff ||= GitDiff.from_string(raw_diff)
+  end
+
+  def file_count
+    diff.files.count
   end
 
   def total_additions
-    diff_files.map(&:total_additions).inject(:+)
+    diff.stats.total_number_of_additions
   end
 
   def total_deletions
-    diff_files.map(&:total_additions).inject(:+)
+    diff.stats.total_number_of_deletions
   end
 end

@@ -28,7 +28,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 1.2'
 
 gem 'draper'
-gem 'git_diff', github: 'anolson/git_diff'
+gem 'git_diff', github: 'anolson/git_diff', branch: "stats"
 
 group :development, :test do
   gem "rspec-rails", "~> 2.14.1"
