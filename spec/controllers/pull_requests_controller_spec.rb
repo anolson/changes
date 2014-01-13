@@ -32,7 +32,7 @@ DIFF
     end
 
   describe "GET #show" do
-    let(:pull_request) { PullRequest.create!(diff: diff) }
+    let(:pull_request) { PullRequest.create!(raw_diff: diff) }
 
     it "responds successfully with a 200 status" do
       get :show, id: pull_request.permalink
@@ -51,7 +51,7 @@ DIFF
   end
 
   describe "POST #create" do
-    let(:pull_request_attributes) { { diff: diff } }
+    let(:pull_request_attributes) { { raw_diff: diff } }
 
     context "with valid attributes" do
       it "creates a new pull_request" do
