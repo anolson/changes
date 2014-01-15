@@ -15,7 +15,7 @@ class PullRequestsController < ApplicationController
   end
 
   def pull_request_params
-    params.require(:pull_request).permit(:diff)
+    params.require(:pull_request).permit(:raw_diff)
   end
 
   def permalink_param
