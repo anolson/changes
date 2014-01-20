@@ -1,7 +1,7 @@
 class PullRequestsController < ApplicationController
   def create
     pull_request = PullRequest.create!(pull_request_params)
-    render nothing: true, status: 201
+    render json: { location: pull_request_url(pull_request) }, status: 201
   end
 
   def show
