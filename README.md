@@ -19,7 +19,7 @@ $ rake db:setup
 $ rails s
 ```
 
-###
+### Run the tests
 
 ```sh
 $ rake spec
