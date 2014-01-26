@@ -1,4 +1,4 @@
 Changes::Application.routes.draw do
-  resources :pull_requests, only: [:show, :create]
-  get '/:permalink', to: 'pull_requests#show'
+  resources :patches, only: [:show, :create]
+  get '/:permalink', to: 'patches#show'
 end

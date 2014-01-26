@@ -1,4 +1,4 @@
-class PullRequest < ActiveRecord::Base
+class Patch < ActiveRecord::Base
   after_create :generate_permalink
 
   def to_param

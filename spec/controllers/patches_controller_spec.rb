@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe PullRequestsController do
+describe PatchesController do
     let(:diff) do
 <<-'DIFF'
 diff --git a/lib/grit/commit.rb b/lib/grit/commit.rb
@@ -32,32 +32,32 @@ DIFF
     end
 
   describe "GET #show" do
-    let(:pull_request) { PullRequest.create!(raw_diff: diff) }
+    let(:patch) { Patch.create!(raw: diff) }
 
     it "responds successfully with a 200 status" do
-      get :show, id: pull_request.permalink
+      get :show, id: patch.permalink
       expect(response).to be_success
     end
 
     it "renders the show template" do
-      get :show, id: pull_request.permalink
+      get :show, id: patch.permalink
       expect(response).to render_template(:show)
     end
 
-    it "assigns @pull_request correctly" do
-      get :show, id: pull_request.permalink
-      expect(assigns(:pull_request)).to eq(pull_request)
+    it "assigns @patch correctly" do
+      get :show, id: patch.permalink
+      expect(assigns(:patch)).to eq(patch)
     end
   end
 
   describe "POST #create" do
-    let(:pull_request_attributes) { { raw_diff: diff } }
+    let(:patch_attributes) { { raw: diff } }
 
     context "with valid attributes" do
-      it "creates a new pull_request" do
+      it "creates a new patch" do
         expect {
-          post :create, pull_request: pull_request_attributes
-        }.to change(PullRequest, :count).by(1)
+          post :create, patch: patch_attributes
+        }.to change(Patch, :count).by(1)
       end
     end
   end

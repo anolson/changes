@@ -1,0 +1,5 @@
+<div id="stats">
+  <span><strong><%= pluralize @diff.file_count, "file" %></strong></span>
+  <span class="addition">with <strong><%= pluralize @diff.total_additions, 'addition'  %></strong></span>
+  <span clas="deletion">and <strong><%= pluralize @diff.total_deletions, 'deletion' %></strong></span>
+</div>
