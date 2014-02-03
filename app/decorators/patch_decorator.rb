@@ -10,11 +10,11 @@ class PatchDecorator < Draper::Decorator
   end
 
   def total_additions
-    stats.total_number_of_additions
+    stats.number_of_additions
   end
 
   def total_deletions
-    stats.total_number_of_deletions
+    stats.number_of_deletions
   end
 
   private

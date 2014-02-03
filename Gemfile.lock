@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/anolson/git_diff.git
-  revision: e3976b5f68a3f0cbeb65356702d0c0e5dc6d0a0c
+  revision: 299559e3a89e71c42504dd486dd23f1df36dcee6
   branch: stats
   specs:
     git_diff (0.2.1)
