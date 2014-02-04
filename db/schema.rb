@@ -13,6 +13,9 @@
 
 ActiveRecord::Schema.define(version: 20140126022021) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "patches", force: true do |t|
     t.text     "raw"
     t.datetime "created_at"
