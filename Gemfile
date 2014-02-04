@@ -20,6 +20,9 @@ gem 'jquery-rails'
 gem 'draper'
 gem 'git_diff', github: 'anolson/git_diff', branch: "stats"
 
+gem 'rails_12factor', group: :production
+
+
 group :development, :test do
   gem "rspec-rails", "~> 2.14.1"
 end
