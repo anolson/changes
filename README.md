@@ -2,7 +2,7 @@
 
 Small bit-sized code reviews.
 
-<3 GitHub pull requests for code reviews, but sometimes you just want to share a small change.  This is usually done by pasting a screenshot or a diff into Campfire.  Instead, use Changes to share your changes.
+GitHub pull requests are awesome for code reviews, but sometimes you just want to share a small change. Use Changes instead to share these small changes.
 
 ### Getting the started
 
