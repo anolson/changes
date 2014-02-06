@@ -29,12 +29,16 @@ header {
   }
 }
 
+footer {
+  color: $medium_grey;
+}
+
 #splash {
   h1 {
     margin-top: 45px;
   }
   pre {
-    color: #AAA;
+    color: $dark_grey;
   }
 }
 
