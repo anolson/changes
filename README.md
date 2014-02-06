@@ -32,7 +32,7 @@ Make a change.
 ```sh
 $ git diff | curl -X POST \
   --data-urlencode patch[raw]@- \
-  http://localhost:3000/patches
+  http://changes.herokuapp.com/patches
 ```
 
 

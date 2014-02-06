@@ -8,7 +8,9 @@
 
     <h2 class="example">
       <pre>
-$ git diff | curl -X POST --data-urlencode patch[raw]@- http://localhost:3000/patches
+$ git diff | curl -X POST \
+  --data-urlencode patch[raw]@- \
+  http://changes.herokuapp.com/patches
       </pre>
     </h2>
   </div>
