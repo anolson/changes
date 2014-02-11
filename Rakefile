@@ -3,4 +3,4 @@
 
 require File.expand_path('../config/application', __FILE__)
 
-MiniPr::Application.load_tasks
+Changes::Application.load_tasks

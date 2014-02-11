@@ -1,4 +1,7 @@
-MiniPr::Application.routes.draw do
-  resources :pull_requests, only: [:show, :create]
-  get '/:permalink', to: 'pull_requests#show'
+Changes::Application.routes.draw do
+  resources :patches, only: [:show, :create]
+  resources :pages, only: [:index]
+
+  get '/:permalink', to: 'patches#show'
+  root to: 'pages#index'
 end

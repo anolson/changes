@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MiniPr</title>
+  <title>Changes</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
   <body>
+    <header>
+      <h2><%= link_to "Changes", root_path %></h2>
+    </header>
     <div id="container">
       <%= yield %>
+      <footer>
+        <span>Created by Andrew Olson <3</span>
+      </footer>
     </div>
   </body>
 </html>

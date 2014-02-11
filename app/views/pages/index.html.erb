@@ -1,0 +1,17 @@
+<div id="container">
+  <div id="splash">
+    <h2>GitHub pull requests are awesome for code reviews, but sometimes you just want to share a small change.  Use Changes instead to share these small changes.</h2>
+
+    <h1>Step 1: Make some changes to your code.</h1>
+
+    <h1>Step 2: Share your changes.</h1>
+
+    <h2 class="example">
+      <pre>
+$ git diff | curl -X POST \
+  --data-urlencode patch[raw]@- \
+  http://changes.herokuapp.com/patches
+      </pre>
+    </h2>
+  </div>
+</div>

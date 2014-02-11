@@ -17,9 +17,35 @@ html,body {
   color: #444;
 }
 
-#container {
+header {
   width: 920px;
-  margin: 10px auto;
+  margin: 0px auto;
+
+  h2 {
+    a {
+      text-decoration: none;
+      color: $dark_grey;
+    }
+  }
+}
+
+footer {
+  color: $medium_grey;
+}
+
+#splash {
+  h1 {
+    margin-top: 45px;
+  }
+  pre {
+    color: $dark_grey;
+  }
+}
+
+#container {
+  clear:both;
+  width: 920px;
+  margin: 20px auto;
 }
 
 #stats {
@@ -84,13 +110,7 @@ html,body {
 
       tr:last-child {
         td {
-          .left {
-            border-radius: 0 0 5px 0;
-          }
-
-          .code {
-            border-radius: 0 0 0 5px;
-          }
+          border-radius: 5px;
         }
       }
 

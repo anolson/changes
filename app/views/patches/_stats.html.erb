@@ -1,0 +1,5 @@
+<div id="stats">
+  <span><strong><%= pluralize @patch.file_count, "file" %></strong></span>
+  <span class="addition">with <strong><%= pluralize @patch.total_additions, 'addition'  %></strong></span>
+  <span clas="deletion">and <strong><%= pluralize @patch.total_deletions, 'deletion' %></strong></span>
+</div>
