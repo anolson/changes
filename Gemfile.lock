@@ -1,9 +1,8 @@
 GIT
   remote: git://github.com/anolson/git_diff.git
-  revision: 299559e3a89e71c42504dd486dd23f1df36dcee6
-  branch: stats
+  revision: 10934b8bd8649ba162172da6ed39d5c30f7270ca
   specs:
-    git_diff (0.2.1)
+    git_diff (0.3.0)
 
 GEM
   remote: https://rubygems.org/
